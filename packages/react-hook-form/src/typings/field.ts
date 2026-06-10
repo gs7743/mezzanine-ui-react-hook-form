@@ -1,8 +1,8 @@
 import {
   CSSProperties,
   HTMLInputTypeAttribute,
-  ReactNode,
 } from 'react';
+import { IconDefinition } from '@mezzanine-ui/icons';
 import {
   Control,
   FieldValues,
@@ -16,13 +16,13 @@ export interface FieldProps<Type extends  FieldValues> extends Omit<
 RegisterOptions<Type>, 'render' | 'onChange' | 'onBlur'> {
   disabled?: boolean;
   disabledErrMsg?: boolean;
-  label?: ReactNode;
+  label?: string;
   placeholder?: string;
   required?: boolean;
   autoComplete?: 'on' | 'off';
   autoFocus?: boolean;
-  remark?: ReactNode;
-  remarkIcon?: ReactNode;
+  remark?: string;
+  remarkIcon?: IconDefinition;
   style?: CSSProperties;
   className?: string;
   type?: HTMLInputTypeAttribute;

@@ -6,6 +6,7 @@ import {
   FormMessage,
   cx,
 } from '@mezzanine-ui/react';
+import { IconDefinition } from '@mezzanine-ui/icons';
 import get from 'lodash/get';
 import { baseFieldClasses } from '@mezzanine-ui/react-hook-form-core';
 import {
@@ -23,11 +24,11 @@ export interface BaseFieldProps {
   disabledErrMsg?: boolean;
   errors?: FieldErrorsImpl<DeepRequired<any>>;
   fieldClassName?: string;
-  label?: ReactNode;
+  label?: string;
   labelClassName?: string;
   name: string;
-  remark?: ReactNode;
-  remarkIcon?: ReactNode;
+  remark?: string;
+  remarkIcon?: IconDefinition;
   required?: boolean;
   style?: CSSProperties;
   baseFieldStyle?: CSSProperties;
@@ -86,11 +87,11 @@ const BaseField: FC<BaseFieldProps> = ({
             labelClassName,
           )}
           htmlFor={name}
-          remark={remark}
-          remarkIcon={remarkIcon}
-        >
-          {label}
-        </FormLabel>
+          labelText={label ?? ''}
+          informationText={remark}
+          informationIcon={remarkIcon}
+        />
+
       )}
       <div
         className={cx(
