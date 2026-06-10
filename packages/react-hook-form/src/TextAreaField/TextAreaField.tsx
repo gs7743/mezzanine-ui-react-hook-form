@@ -87,15 +87,10 @@ const TextAreaField: HookFormFieldComponent<TextAreaFieldProps> = ({
     >
       <Textarea
         {...props}
-        fullWidth
         clearable={clearable}
         maxLength={maxLength}
-        textareaProps={{
-          autoComplete,
-          id: registerName,
-          name: registerName,
-          onBlur: registration.onBlur,
-        }}
+        autoComplete={autoComplete}
+        id={registerName}
         {...registration}
         className={className}
         onChange={onChange}
