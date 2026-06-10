@@ -81,6 +81,7 @@ const CheckboxGroupField: HookFormFieldComponent<CheckboxGroupFieldProps> = ({
     >
       <CheckboxGroup
         {...props}
+        name={registerName}
         orientation={orientation}
         options={options}
         defaultValue={defaultValue}
